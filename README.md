@@ -4,6 +4,39 @@ This repository is part of the [Refactoring.Guru](https://refactoring.guru/desig
 
 It contains Ruby examples for all classic GoF design patterns.
 
+## Wally Invest — Cursor skills (fork)
+
+Ce dépôt est un **fork** maintenu pour l’équipe **Wally Invest** : exemples GoF Ruby + skills Cursor pour le backend Rails.
+
+### Skills inclus
+
+| Skill | Rôle |
+|-------|------|
+| `.cursor/skills/implement-rails-patterns/` | Implémenter / scaffolder un pattern en code Rails **prod** + note GoF courte |
+| `.cursor/skills/refactor-rails-patterns/` | Refactoriser du code existant (smells → pattern → étapes sûres) |
+
+Les skills **référencent** les exemples `src/<pattern>/…` pour la structure conceptuelle ; ils ne republient pas le contenu pédagogique tel quel dans `app/`.
+
+### Utilisation par l’équipe
+
+**Option A — Travailler dans ce repo** (référence + skills déjà présents) : ouvrir ce clone dans Cursor ; les skills projet se chargent depuis `.cursor/skills/`.
+
+**Option B — Dans l’app Rails Wally** : copier les deux dossiers côte à côte, puis committer dans l’app :
+
+```bash
+mkdir -p .cursor/skills
+cp -R /chemin/vers/design-patterns-ruby/.cursor/skills/implement-rails-patterns .cursor/skills/
+cp -R /chemin/vers/design-patterns-ruby/.cursor/skills/refactor-rails-patterns .cursor/skills/
+```
+
+Garder ce fork accessible (clone voisin ou doc interne) pour que le skill refactor puisse lire `src/<pattern>/conceptual/main.rb` si besoin.
+
+Exemples de prompts Cursor :
+
+- « Implémente une Strategy de pricing » → `implement-rails-patterns`
+- « Refactorise ce `case` dans Order#total vers un pattern » → `refactor-rails-patterns`
+
+
 Each pattern includes two examples:
 
 - [x] **Conceptual** examples show the internal structure of patterns, including detailed comments.
